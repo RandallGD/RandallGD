@@ -1,0 +1,79 @@
+package SimpleCalculator;
+
+import java.util.Scanner;
+
+public class SimpleCalculator{
+
+    public static void main(String[]args){
+
+        Scanner input=new Scanner(System.in);
+
+        
+
+        double FirNum;
+
+        double SecNum;
+
+        String operator;
+
+        double answer;
+
+        
+
+        System.out.print("Write the first number: ");
+
+        FirNum = (double)input.nextDouble();
+
+        input.nextLine();
+
+
+
+        System.out.print("Write the operator (+,-,*,/): ");
+
+        operator = input.nextLine();
+
+
+
+        System.out.print("Write the second number: ");
+
+        SecNum = (double)input.nextDouble();
+
+
+
+        if (operator.equals("+")){
+
+            answer = FirNum + SecNum;
+
+            System.out.printf("%.02f + %.02f = %.02f", FirNum, SecNum, answer);}
+
+        
+
+        else if (operator.equals("-")){
+
+            answer = FirNum - SecNum;
+
+            System.out.printf("%.02f - %.02f = %.02f", FirNum, SecNum, answer);}
+
+        
+
+        else if (operator.equals("*")){
+
+            answer = FirNum * SecNum;
+
+            System.out.printf("%.02f * %.02f = %.02f", FirNum, SecNum, answer);}
+
+        
+
+        else if (operator.equals("/")){
+
+            answer = FirNum / SecNum;
+
+            System.out.printf("%.02f / %.02f = %.02f", FirNum, SecNum, answer);}
+
+        
+
+        else {
+
+            System.out.println("Invalid operator");}
+
+        input.close();}}
